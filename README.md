@@ -8,6 +8,7 @@ En este tutorial, aprendiste lo siguiente:
 - Cómo crear una aplicación Express
 - Cómo utilizar el enrutamiento
 - Cómo agregar código
+- Lanzar la aplicación a producción con ayuda Railway
 
 # Introducción a Node.js y Express
 
