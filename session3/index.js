@@ -1,10 +1,11 @@
 
-require("./database/config").dbConnection();
 const express = require("express");
+const Categoria = require("./models/categoria");
+require("./database/config").dbConnection();
+
 const app = express();
 app.use(express.json());
 
-const Categoria = require("./models/categoria");
 app.get("/", (req, res) => {
   res.send("Hola, mundo!");
 });
