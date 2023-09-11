@@ -1,11 +1,10 @@
-const { Schema, model } = require('mongoose');
+/* 1. Importar  mongoose*/
 
-const ProductoSchema = Schema({
-    nombre: {
-        type: String,
-        required: [true, 'El nombre es obligatorio'],
-        unique: true
-    },
+
+/* 2. Ubicar el nombre de la colección en singular y en mayúsculas */
+const NameSchema = Schema({
+    /* 3. Crear un nuevo campo nombre */
+
     estado: {
         type: Boolean,
         default: true,
@@ -15,21 +14,11 @@ const ProductoSchema = Schema({
         type: Number,
         default: 0
     },
-    categoria: {
-        type: Schema.Types.ObjectId,
-        ref: 'Categoria',
-        required: true
-    },
-    descripcion: { type: String },
+
+     /* 4. Crear un nuevo campo descripcion */
+
     disponible: { type: Boolean, defult: true },
     img: { type: String },
 });
 
-
-ProductoSchema.methods.toJSON = function() {
-    const { __v, estado, ...data  } = this.toObject();
-    return data;
-}
-
-
-module.exports = model( 'Producto', ProductoSchema );
+/*  5. Exportar el modelo */

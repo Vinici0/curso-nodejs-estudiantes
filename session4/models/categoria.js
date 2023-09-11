@@ -1,13 +1,16 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-const categorySchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  /*Crear una propiedad description*/
+const CategoriaSchema = Schema({
+    nombre: {
+        type: String,
+        required: [true, 'El nombre es obligatorio'],
+        unique: true
+    },
+    estado: {
+        type: Boolean,
+        default: true,
+        required: true
+    },
 });
 
-const Category = mongoose.model('Category', categorySchema);
-
-module.exports = Category;
+module.exports = model( 'Categoria', CategoriaSchema );
