@@ -5,11 +5,11 @@
 
 ## Mongoose CRUD (Create, Read, Update, Delete)
 
-NameModel.find() // Devuelve todos los documentos de la colección
-NameModel.findById(id) // Devuelve un documento por id
-NameModel.save() // Inserta y actualiza documentos
-NameModel.remove() // Elimina documentos
-NameModel.findByIdAndUpdate() // Actualiza un documento por id
+- NameModel.find() // Devuelve todos los documentos de la colección
+- NameModel.findById(id) // Devuelve un documento por id
+- NameModel.save() // Inserta y actualiza documentos
+- NameModel.remove() // Elimina documentos
+- NameModel.findByIdAndUpdate() // Actualiza un documento por id
 
 ## MPER
 1. Preparar el entorno de desarrollo para trabajar con MongoDB, Express
